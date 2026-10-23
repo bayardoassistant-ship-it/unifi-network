@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "unifi-network": {
+      "command": "python3",
+      "args": [
+        "${CURSOR_PLUGIN_ROOT}/server.py"
+      ],
+      "env": {
+        "UNIFI_API_KEY": "${UNIFI_API_KEY}",
+        "UNIFI_BASE_URL": "${UNIFI_BASE_URL}",
+        "UNIFI_CONSOLE_ID": "${UNIFI_CONSOLE_ID}"
+      }
+    }
+  }
+}

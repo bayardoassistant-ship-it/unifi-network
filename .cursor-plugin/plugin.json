@@ -1,0 +1,54 @@
+{
+  "name": "unifi-network",
+  "displayName": "UniFi Network",
+  "version": "1.0.0",
+  "description": "Manage and monitor Ubiquiti UniFi Network consoles, sites, devices, clients, WiFi broadcasts, VLANs, hotspot vouchers, and firewall policies via the official UniFi Network Integration API v1 (local gateway or Cloud Connector).",
+  "author": {
+    "name": "Bayardo Lopezpineda"
+  },
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "unifi",
+    "ubiquiti",
+    "network",
+    "wifi",
+    "firewall",
+    "mcp",
+    "infrastructure"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "unifi",
+    "ubiquiti",
+    "networking",
+    "mcp",
+    "infrastructure"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "UNIFI_API_KEY": {
+        "type": "string",
+        "title": "UniFi API Key",
+        "description": "X-API-KEY from unifi.ui.com API Keys (for Cloud Connector mode, default) or UniFi OS Settings \u2192 Control Plane \u2192 Integrations (for local gateway mode)"
+      },
+      "UNIFI_BASE_URL": {
+        "type": "string",
+        "title": "UniFi Local Console URL",
+        "description": "Optional local UniFi gateway URL (e.g. https://192.168.1.1) when using local/auto mode. Defaults to https://192.168.1.1",
+        "default": "https://192.168.1.1"
+      },
+      "UNIFI_CONSOLE_ID": {
+        "type": "string",
+        "title": "UniFi Cloud Console ID (optional)",
+        "description": "Optional Console ID from unifi.ui.com. If omitted, the plugin automatically discovers your Console ID via GET https://api.ui.com/v1/hosts."
+      }
+    },
+    "required": [
+      "UNIFI_API_KEY"
+    ]
+  }
+}
